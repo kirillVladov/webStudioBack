@@ -10,17 +10,17 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@RestController("/calls")
+@RestController
 public class CallController {
     @Autowired
     private CallRepository callRepo;
 
-    @PostMapping("/add")
+    @PostMapping("/calls/add")
     public Call addCall(@RequestBody Call call) {
         return callRepo.save(call);
     }
 
-    @GetMapping("/getList")
+    @GetMapping("/calls/getList")
     public List<Call> getCallList() {
         return callRepo.findAll();
     }
