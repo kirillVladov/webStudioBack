@@ -1,13 +1,11 @@
 package com.example.codeTamerBack.controllers;
 
+import com.example.codeTamerBack.Interfaces.UserRole;
 import com.example.codeTamerBack.model.User;
 import com.example.codeTamerBack.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.io.UnsupportedEncodingException;
 import java.security.SecureRandom;
@@ -18,7 +16,7 @@ public class UserController {
     @Autowired
     private UserRepository userRepo;
 
-    @PostMapping("/users/addUser")
+    @PostMapping("/users/registration")
     public User addUser(@RequestBody User user) {
 
         int strength = 10; // work factor of bcrypt
@@ -40,6 +38,16 @@ public class UserController {
 
         return bCryptPasswordEncoder.matches(user.getPassword(), userModel.getPassword());
     }
+
+    @GetMapping("/users")
+    public List<User> getUserByType(@RequestParam("userRole") UserRole userRole) {
+        return userRepo.findByRole(userRole);
+    }
+
+//    @GetMapping("/users/profile")
+//    public List<User> getProfileByUserToken(@RequestHeader("token") String token) {
+//        return userRepo.findByRole(userRole);
+//    }
 
     @GetMapping("/users/getAllUser")
     public List<User> getAllUser(){
