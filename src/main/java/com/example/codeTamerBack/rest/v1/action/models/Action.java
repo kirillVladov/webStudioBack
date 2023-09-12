@@ -1,7 +1,8 @@
-package com.example.codeTamerBack.rest.v1.model;
+package com.example.codeTamerBack.rest.v1.action.models;
 
 import com.example.codeTamerBack.rest.v1.Interfaces.ActionStatus;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.jetbrains.annotations.NotNull;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
 
@@ -12,25 +13,18 @@ public class Action {
     private String taskId;
     @CreatedDate
     private String expirationDate;
-    private String name;
-    private String description;
     private ActionStatus status;
 
-    public Action(@JsonProperty String actionId,
-                  @JsonProperty String userId,
-                  @JsonProperty  String taskId,
-                  @JsonProperty String expirationDate,
-                  @JsonProperty String name,
-                  @JsonProperty String description,
-                  @JsonProperty ActionStatus status
+    public Action(
+                  @NotNull @JsonProperty String userId,
+                  @NotNull @JsonProperty  String taskId,
+                  @NotNull @JsonProperty String expirationDate
     ) {
-        this.actionId = actionId;
+        super();
         this.userId = userId;
         this.taskId = taskId;
         this.expirationDate = expirationDate;
-        this.name = name;
-        this.description = description;
-        this.status = status;
+        this.status = ActionStatus.awaiting;
     }
     public String getActionId() {
         return actionId;
@@ -48,12 +42,8 @@ public class Action {
         return expirationDate;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public String getDescription() {
-        return description;
+    public void setStatus(ActionStatus status) {
+        this.status = status;
     }
 
     public ActionStatus getStatus() {
