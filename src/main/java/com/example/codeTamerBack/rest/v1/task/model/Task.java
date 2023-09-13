@@ -1,17 +1,22 @@
-package com.example.codeTamerBack.rest.v1.model;
+package com.example.codeTamerBack.rest.v1.task.model;
 
 import com.example.codeTamerBack.rest.v1.Interfaces.Currency;
 import com.example.codeTamerBack.rest.v1.Interfaces.TaskPriority;
+import com.example.codeTamerBack.rest.v1.model.User;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.List;
+
+@Document
 public class Task {
     @Id
     public String taskId;
-    public User user;
+    public String userId;
     public String header;
     public TaskPriority priority;
-    public String tags;
+    public List<String> tags;
     public String description;
     public int price;
     public Currency currency;
@@ -19,20 +24,19 @@ public class Task {
     public String expiresAt;
 
     public Task(
-            @JsonProperty("taskId") String taskId,
-            @JsonProperty("user") User user,
+            @JsonProperty("userId") String userId,
             @JsonProperty("priority") TaskPriority priority,
             @JsonProperty("header") String header,
-            @JsonProperty("tags") String tags,
+            @JsonProperty("tags") List<String> tags,
             @JsonProperty("description") String description,
             @JsonProperty("price") int price,
             @JsonProperty("currency") Currency currency,
             @JsonProperty("startAt") String startAt,
             @JsonProperty("expiresAt") String expiresAt
     ) {
-        this.taskId = taskId;
+        super();
         this.priority = priority;
-        this.user = user;
+        this.userId = userId;
         this.header = header;
         this.tags = tags;
         this.description = description;
@@ -42,21 +46,8 @@ public class Task {
         this.expiresAt = expiresAt;
     }
 
-//    public Task(Task task) {
-//        this.taskId = task.getTaskId();
-//        this.priority = task.getPriority();
-//        this.user = task.getUser();
-//        this.header = task.getHeader();
-//        this.tags = task.getTags();
-//        this.description = task.getDescription();
-//        this.price = task.getPrice();
-//        this.currency = task.getCurrency();
-//        this.startAt = task.getStartAt();
-//        this.expiresAt = task.getExpiresAt();
-//    }
-
-    public void setUser(User user) {
-        this.user = user;
+    public void setUser(String userId) {
+        this.userId = userId;
     }
 
     public String getTaskId() {
@@ -66,15 +57,15 @@ public class Task {
         return priority;
     }
 
-    public User getUser() {
-        return user;
+    public String getUserId() {
+        return userId;
     }
 
     public String getHeader() {
         return header;
     }
 
-    public String getTags() {
+    public List<String> getTags() {
         return tags;
     }
 

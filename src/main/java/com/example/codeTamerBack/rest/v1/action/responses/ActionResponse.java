@@ -2,12 +2,11 @@ package com.example.codeTamerBack.rest.v1.action.responses;
 
 import com.example.codeTamerBack.rest.v1.Interfaces.ActionStatus;
 import com.example.codeTamerBack.rest.v1.action.models.Action;
-import com.example.codeTamerBack.rest.v1.model.Task;
+import com.example.codeTamerBack.rest.v1.task.model.Task;
 import com.example.codeTamerBack.rest.v1.model.User;
 import lombok.Getter;
 import lombok.Setter;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.data.annotation.CreatedDate;
+
 @Getter
 @Setter
 public class ActionResponse {
