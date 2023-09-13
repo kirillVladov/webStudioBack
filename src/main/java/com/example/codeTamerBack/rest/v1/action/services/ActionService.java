@@ -4,21 +4,16 @@ import com.example.codeTamerBack.rest.v1.Interfaces.ActionStatus;
 import com.example.codeTamerBack.rest.v1.action.models.Action;
 import com.example.codeTamerBack.rest.v1.action.repositories.ActionRepository;
 import com.example.codeTamerBack.rest.v1.action.responses.ActionResponse;
-import com.example.codeTamerBack.rest.v1.common.responses.SuccessResponse;
-import com.example.codeTamerBack.rest.v1.model.Task;
+import com.example.codeTamerBack.rest.v1.task.model.Task;
 import com.example.codeTamerBack.rest.v1.model.User;
-import com.example.codeTamerBack.rest.v1.repository.TaskRepository;
+import com.example.codeTamerBack.rest.v1.task.repositories.TaskRepository;
 import com.example.codeTamerBack.rest.v1.repository.UserRepository;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.mongodb.repository.Query;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestParam;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 @Service
 public class ActionService {
