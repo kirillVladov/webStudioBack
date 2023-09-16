@@ -2,7 +2,7 @@ package com.example.codeTamerBack.rest.v1.task.responses;
 
 import com.example.codeTamerBack.rest.v1.Interfaces.Currency;
 import com.example.codeTamerBack.rest.v1.Interfaces.TaskPriority;
-import com.example.codeTamerBack.rest.v1.model.User;
+import com.example.codeTamerBack.rest.v1.user.models.User;
 import com.example.codeTamerBack.rest.v1.task.model.Task;
 import lombok.Getter;
 import lombok.Setter;

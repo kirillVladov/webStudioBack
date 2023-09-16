@@ -1,6 +1,5 @@
 package com.example.codeTamerBack.rest.v1.task.repositories;
 
-import com.example.codeTamerBack.rest.v1.model.User;
 import com.example.codeTamerBack.rest.v1.task.model.Task;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.data.domain.Page;

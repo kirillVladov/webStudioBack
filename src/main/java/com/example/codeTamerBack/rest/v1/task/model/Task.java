@@ -2,7 +2,6 @@ package com.example.codeTamerBack.rest.v1.task.model;
 
 import com.example.codeTamerBack.rest.v1.Interfaces.Currency;
 import com.example.codeTamerBack.rest.v1.Interfaces.TaskPriority;
-import com.example.codeTamerBack.rest.v1.model.User;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;

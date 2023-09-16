@@ -1,4 +1,4 @@
-package com.example.codeTamerBack.rest.v1.model;
+package com.example.codeTamerBack.rest.v1.project.models;
 
 import com.example.codeTamerBack.rest.v1.Interfaces.ProjectType;
 import com.fasterxml.jackson.annotation.JsonCreator;

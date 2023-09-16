@@ -2,9 +2,8 @@ package com.example.codeTamerBack.rest.v1.task.controllers;
 
 import com.example.codeTamerBack.rest.v1.common.responses.SuccessResponse;
 import com.example.codeTamerBack.rest.v1.task.model.Task;
-import com.example.codeTamerBack.rest.v1.model.User;
 import com.example.codeTamerBack.rest.v1.task.repositories.TaskRepository;
-import com.example.codeTamerBack.rest.v1.repository.UserRepository;
+import com.example.codeTamerBack.rest.v1.user.repositories.UserRepository;
 import com.example.codeTamerBack.rest.v1.task.responses.TaskResponse;
 import com.example.codeTamerBack.rest.v1.task.responses.TasksWithPaginationResponse;
 import com.example.codeTamerBack.rest.v1.task.services.TasksServices;

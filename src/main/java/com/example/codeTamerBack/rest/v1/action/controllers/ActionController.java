@@ -6,13 +6,11 @@ import com.example.codeTamerBack.rest.v1.action.requests.ActionResponseRequest;
 import com.example.codeTamerBack.rest.v1.action.responses.ActionResponse;
 import com.example.codeTamerBack.rest.v1.action.services.ActionService;
 import com.example.codeTamerBack.rest.v1.common.responses.SuccessResponse;
-import com.example.codeTamerBack.rest.v1.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @CrossOrigin(origins = "*")
