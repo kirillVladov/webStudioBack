@@ -8,8 +8,12 @@ import com.example.codeTamerBack.rest.v1.task.repositories.TaskRepository;
 import com.example.codeTamerBack.rest.v1.task.responses.TaskResponse;
 import com.example.codeTamerBack.rest.v1.task.responses.TasksWithPaginationResponse;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.AbstractPageRequest;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
+import java.awt.print.Pageable;
 import java.util.List;
 import java.util.Optional;
 
@@ -64,8 +68,9 @@ public class TasksServices {
     }
 
     public TasksWithPaginationResponse getTasksList(int page, int perPage) {
-        List<Task> tasks = taskRepository.findTasks((page - 1) * perPage, perPage);
-        int countPages = (int) Math.floor((double) taskRepository.count() % perPage);
+        Page<Task> tasks = taskRepository.findAll(PageRequest.of(page - 1, perPage));
+        int countPages = tasks.getTotalPages();
+        int totalItemsCount = countPages * perPage;
 
         List<TaskResponse> tasksList = tasks.stream().map(item -> {
             User user = userRepository.findById(item.getUserId()).get();
@@ -73,6 +78,6 @@ public class TasksServices {
             return new TaskResponse(item, user);
         }).toList();
 
-        return new TasksWithPaginationResponse(tasksList, countPages, page);
+        return new TasksWithPaginationResponse(tasksList, countPages, page, totalItemsCount);
     }
 }
