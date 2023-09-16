@@ -2,6 +2,9 @@ package com.example.codeTamerBack.rest.v1.task.repositories;
 
 import com.example.codeTamerBack.rest.v1.model.User;
 import com.example.codeTamerBack.rest.v1.task.model.Task;
+import org.jetbrains.annotations.NotNull;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
 
@@ -14,6 +17,5 @@ public interface TaskRepository extends MongoRepository<Task, String> {
     @Query
     List<Task> findByUserId(String userId);
 
-    @Query(value = "{}", fields = "{messages: {$slice: [?0, ?1]}}")
-    List<Task> findTasks(int skip, int limit);
+    @NotNull Page<Task> findAll(@NotNull Pageable pageable);
 }

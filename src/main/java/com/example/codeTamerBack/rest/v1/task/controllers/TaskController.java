@@ -57,7 +57,9 @@ public class TaskController {
     }
 
     @GetMapping("/tasks")
-    public TasksWithPaginationResponse getTasksList(@RequestParam("page") int page) {
+    public TasksWithPaginationResponse getTasksList(
+            @RequestParam("page") int page
+    ) {
         int perPage = 10;
         return tasksServices.getTasksList(page, perPage);
     }
