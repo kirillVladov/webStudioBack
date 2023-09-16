@@ -1,7 +1,7 @@
-package com.example.codeTamerBack.rest.v1.controllers;
+package com.example.codeTamerBack.rest.v1.call;
 
-import com.example.codeTamerBack.rest.v1.model.Call;
-import com.example.codeTamerBack.rest.v1.repository.CallRepository;
+import com.example.codeTamerBack.rest.v1.call.Call;
+import com.example.codeTamerBack.rest.v1.call.CallRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;

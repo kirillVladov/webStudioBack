@@ -1,4 +1,4 @@
-package com.example.codeTamerBack.rest.v1.model;
+package com.example.codeTamerBack.rest.v1.question;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;

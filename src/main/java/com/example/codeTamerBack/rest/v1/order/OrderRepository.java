@@ -1,7 +1,7 @@
-package com.example.codeTamerBack.rest.v1.repository;
+package com.example.codeTamerBack.rest.v1.order;
 
 import com.example.codeTamerBack.rest.v1.Interfaces.UserRole;
-import com.example.codeTamerBack.rest.v1.model.Order;
+import com.example.codeTamerBack.rest.v1.order.Order;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
 

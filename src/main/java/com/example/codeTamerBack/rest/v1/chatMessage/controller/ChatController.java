@@ -1,12 +1,12 @@
-package com.example.codeTamerBack.rest.v1.controllers;
+package com.example.codeTamerBack.rest.v1.chatMessage.controller;
 
-import com.example.codeTamerBack.rest.v1.model.ChatMessage;
+import com.example.codeTamerBack.rest.v1.chatMessage.model.ChatMessage;
 //import org.springframework.messaging.handler.annotation.MessageMapping;
 //import org.springframework.messaging.handler.annotation.Payload;
 //import org.springframework.messaging.handler.annotation.SendTo;
 //import org.springframework.messaging.simp.SimpMessageHeaderAccessor;
 //import org.springframework.stereotype.Controller;
-import com.example.codeTamerBack.rest.v1.repository.ChatMessageRepository;
+import com.example.codeTamerBack.rest.v1.chatMessage.repositories.ChatMessageRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

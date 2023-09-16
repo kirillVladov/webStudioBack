@@ -1,7 +1,7 @@
-package com.example.codeTamerBack.rest.v1.model;
+package com.example.codeTamerBack.rest.v1.order;
 
 import com.example.codeTamerBack.rest.v1.Interfaces.UserRole;
-import com.example.codeTamerBack.rest.v1.repository.UserRepository;
+import com.example.codeTamerBack.rest.v1.user.repositories.UserRepository;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.springframework.data.annotation.Id;
@@ -49,5 +49,21 @@ public class Order {
 
     public void setUserRole(UserRole userRole) {
         this.userRole = userRole;
+    }
+
+    public static class OrderRequest {
+        public String userId;
+        public String name;
+        public String description;
+        public Float price;
+        public String startAt;
+        public String endAt;
+        public UserRole userRole;
+
+        public String getUserId() {return userId;}
+
+        public void setUserRole(UserRole userRole) {
+            this.userRole = userRole;
+        }
     }
 }

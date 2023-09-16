@@ -1,10 +1,8 @@
-package com.example.codeTamerBack.rest.v1.controllers;
+package com.example.codeTamerBack.rest.v1.order;
 
 import com.example.codeTamerBack.rest.v1.Interfaces.UserRole;
-import com.example.codeTamerBack.rest.v1.model.Order;
-import com.example.codeTamerBack.rest.v1.model.User;
-import com.example.codeTamerBack.rest.v1.repository.OrderRepository;
-import com.example.codeTamerBack.rest.v1.repository.UserRepository;
+import com.example.codeTamerBack.rest.v1.user.models.User;
+import com.example.codeTamerBack.rest.v1.user.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

@@ -1,10 +1,10 @@
-package com.example.codeTamerBack.rest.v1.controllers;
+package com.example.codeTamerBack.rest.v1.user.controller;
 
 import com.example.codeTamerBack.rest.v1.Interfaces.ChangePasswordResponse;
 import com.example.codeTamerBack.rest.v1.Interfaces.UserRole;
-import com.example.codeTamerBack.rest.v1.model.User;
-import com.example.codeTamerBack.rest.v1.repository.UserRepository;
-import com.example.codeTamerBack.rest.v1.requests.AvatarRequest;
+import com.example.codeTamerBack.rest.v1.user.models.User;
+import com.example.codeTamerBack.rest.v1.user.repositories.UserRepository;
+import com.example.codeTamerBack.rest.v1.user.requests.AvatarRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;

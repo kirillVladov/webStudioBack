@@ -1,8 +1,8 @@
-package com.example.codeTamerBack.rest.v1.controllers;
+package com.example.codeTamerBack.rest.v1.project.controllers;
 
 import com.example.codeTamerBack.rest.v1.Interfaces.ProjectType;
-import com.example.codeTamerBack.rest.v1.model.Project;
-import com.example.codeTamerBack.rest.v1.repository.ProjectRepository;
+import com.example.codeTamerBack.rest.v1.project.models.Project;
+import com.example.codeTamerBack.rest.v1.project.repositories.ProjectRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

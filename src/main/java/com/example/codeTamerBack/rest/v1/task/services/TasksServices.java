@@ -1,19 +1,17 @@
 package com.example.codeTamerBack.rest.v1.task.services;
 
 import com.example.codeTamerBack.rest.v1.common.responses.SuccessResponse;
-import com.example.codeTamerBack.rest.v1.model.User;
-import com.example.codeTamerBack.rest.v1.repository.UserRepository;
+import com.example.codeTamerBack.rest.v1.user.models.User;
+import com.example.codeTamerBack.rest.v1.user.repositories.UserRepository;
 import com.example.codeTamerBack.rest.v1.task.model.Task;
 import com.example.codeTamerBack.rest.v1.task.repositories.TaskRepository;
 import com.example.codeTamerBack.rest.v1.task.responses.TaskResponse;
 import com.example.codeTamerBack.rest.v1.task.responses.TasksWithPaginationResponse;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.AbstractPageRequest;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
-import java.awt.print.Pageable;
 import java.util.List;
 import java.util.Optional;
 

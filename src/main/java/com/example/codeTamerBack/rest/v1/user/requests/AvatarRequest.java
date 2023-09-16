@@ -1,4 +1,4 @@
-package com.example.codeTamerBack.rest.v1.requests;
+package com.example.codeTamerBack.rest.v1.user.requests;
 
 public class AvatarRequest {
     private String avatar;
