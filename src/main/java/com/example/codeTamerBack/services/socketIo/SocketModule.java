@@ -28,7 +28,7 @@ public class SocketModule {
     public SocketModule(SocketIOServer server, SocketService socketService) {
         this.server = server;
         this.socketService = socketService;
-        log.info("start module ");
+//        log.info("start module ");
         server.addConnectListener(onConnected());
         server.addDisconnectListener(onDisconnected());
         server.addEventListener("send_message", Message.class, onChatReceived());
@@ -37,7 +37,7 @@ public class SocketModule {
 
     private DataListener<Message> onChatReceived() {
         return (senderClient, data, ackSender) -> {
-        log.info("onreceived");
+//        log.info("onreceived");
 //            String[] split = data.getRoom().split("-");
 //            Message message = new Message(
 //                    senderClient.get("user"),
@@ -69,7 +69,7 @@ public class SocketModule {
 
     private DisconnectListener onDisconnected() {
         return client -> {
-            log.info("Client[{}] - Disconnected from socket", client.getSessionId().toString());
+//            log.info("Client[{}] - Disconnected from socket", client.getSessionId().toString());
         };
     }
 
@@ -90,7 +90,7 @@ public class SocketModule {
 
         client.joinRoom(roomKey);
         socketService.saveInfoMessage(client, String.format(Constants.WELCOME_MESSAGE, userId), roomKey);
-        log.info(client.getAllRooms().toString());
+//        log.info(client.getAllRooms().toString());
     };
 
 }
