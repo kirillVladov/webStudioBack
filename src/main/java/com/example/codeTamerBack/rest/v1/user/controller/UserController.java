@@ -2,9 +2,11 @@ package com.example.codeTamerBack.rest.v1.user.controller;
 
 import com.example.codeTamerBack.rest.v1.Interfaces.ChangePasswordResponse;
 import com.example.codeTamerBack.rest.v1.Interfaces.UserRole;
+import com.example.codeTamerBack.rest.v1.common.services.UploadService;
 import com.example.codeTamerBack.rest.v1.user.models.User;
 import com.example.codeTamerBack.rest.v1.user.repositories.UserRepository;
 import com.example.codeTamerBack.rest.v1.user.requests.AvatarRequest;
+import com.example.codeTamerBack.rest.v1.user.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -22,6 +24,8 @@ import java.util.Optional;
 public class UserController  {
     @Autowired
     private UserRepository userRepo;
+    @Autowired
+    private UserService userService;
     private int encodeLength = 12;
 
     @PostMapping("/users/registration")
@@ -56,14 +60,8 @@ public class UserController  {
     }
 
     @PostMapping("users/avatar")
-    public Optional<User> setAvatar(@RequestBody AvatarRequest data) {
-        Optional<User> currentUser = userRepo.findById(data.getUserId());
-
-        currentUser.get().setAvatar(data.getAvatar());
-
-        userRepo.save(currentUser.get());
-
-        return currentUser;
+    public User setAvatar(@RequestBody AvatarRequest data) throws Exception {
+        return userService.setAvatarToUser(data);
     }
 
     @GetMapping("/users")

@@ -16,7 +16,7 @@ import java.util.UUID;
 @Service
 @Slf4j
 public class UploadService {
-    public static String UPLOAD_DIRECTORY = System.getProperty("user.dir") + "/images";
+    public static String UPLOAD_DIRECTORY = System.getProperty("user.dir") + "/public/images";
     public static String[] allowedFileTypes = {FileTypes.jpeg.getType(), FileTypes.jpeg.getType()};
 
     public static String uploadImage(MultipartFile file) throws Exception {

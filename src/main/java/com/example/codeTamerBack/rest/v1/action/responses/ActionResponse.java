@@ -15,7 +15,9 @@ public class ActionResponse {
     private String expirationDate;
     private ActionStatus status;
     private User user;
-    private Task task;
+    private String name;
+    private String description;
+//    private Task task;
 
     public ActionResponse() {}
 
@@ -25,6 +27,7 @@ public class ActionResponse {
         this.status = action.getStatus();
         this.expirationDate = action.getExpirationDate();
         this.user = user;
-        this.task = task;
+        this.name = task.getHeader();
+        this.description = task.getDescription();
     }
 }

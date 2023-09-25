@@ -1,5 +1,6 @@
 package com.example.codeTamerBack.rest.v1.action.controllers;
 
+import com.example.codeTamerBack.rest.v1.Interfaces.ActionStatus;
 import com.example.codeTamerBack.rest.v1.action.models.Action;
 import com.example.codeTamerBack.rest.v1.action.repositories.ActionRepository;
 import com.example.codeTamerBack.rest.v1.action.requests.ActionResponseRequest;
@@ -40,7 +41,11 @@ public class ActionController {
     }
 
     @GetMapping("actions/list")
-    public List<ActionResponse> getActions(@RequestHeader(HttpHeaders.AUTHORIZATION) String token) throws Exception {
-        return actionService.getActionsList(token);
+    public List<ActionResponse> getActions(@RequestHeader(HttpHeaders.AUTHORIZATION) String token, @RequestParam(name = "status", required = false) ActionStatus status) throws Exception {
+        if(status != null) {
+            return actionService.getActionsList(token, status);
+        } else {
+            return actionService.getActionsList(token);
+        }
     }
 }
