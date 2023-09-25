@@ -38,10 +38,21 @@ public class ActionService {
         return userAction;
     }
 
+    public List<ActionResponse> getActionsList(String token, ActionStatus status) throws Exception {
+        User user = userRepository.findByToken(token);
+        List<Action> action = actionRepository.findByUserIdAndStatus(user.getUserId(), status);
+
+        if(user == null) throw new Exception("user not found");
+
+        return action.stream().map(actionItem -> {
+            Optional<Task> task = taskRepository.findById(actionItem.getTaskId());
+            return new ActionResponse(actionItem, user, task.get());
+        }).toList();
+    }
+
     public List<ActionResponse> getActionsList(String token) throws Exception {
         User user = userRepository.findByToken(token);
         List<Action> action = actionRepository.findByUserId(user.getUserId());
-//        Optional<Task> task = taskRepository.findById(action.)
 
         if(user == null) throw new Exception("user not found");
 

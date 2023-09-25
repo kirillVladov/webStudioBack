@@ -23,7 +23,6 @@ public class Task {
     public String expiresAt;
 
     public Task(
-            @JsonProperty("userId") String userId,
             @JsonProperty("priority") TaskPriority priority,
             @JsonProperty("header") String header,
             @JsonProperty("tags") List<String> tags,
@@ -35,7 +34,6 @@ public class Task {
     ) {
         super();
         this.priority = priority;
-        this.userId = userId;
         this.header = header;
         this.tags = tags;
         this.description = description;
