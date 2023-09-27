@@ -1,6 +1,6 @@
 package com.example.codeTamerBack.rest.v1.action.controllers;
 
-import com.example.codeTamerBack.rest.v1.Interfaces.ActionStatus;
+import com.example.codeTamerBack.rest.v1.action.interfaces.ActionStatus;
 import com.example.codeTamerBack.rest.v1.action.models.Action;
 import com.example.codeTamerBack.rest.v1.action.repositories.ActionRepository;
 import com.example.codeTamerBack.rest.v1.action.requests.ActionResponseRequest;

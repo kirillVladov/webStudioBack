@@ -1,5 +1,5 @@
 package com.example.codeTamerBack.rest.v1.user.models;
-import com.example.codeTamerBack.rest.v1.Interfaces.UserRole;
+import com.example.codeTamerBack.rest.v1.user.interfaces.UserRole;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.springframework.data.annotation.Id;

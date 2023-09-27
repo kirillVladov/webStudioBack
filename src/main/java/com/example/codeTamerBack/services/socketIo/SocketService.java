@@ -1,7 +1,7 @@
 package com.example.codeTamerBack.services.socketIo;
 
 import com.corundumstudio.socketio.SocketIOClient;
-import com.example.codeTamerBack.rest.v1.Interfaces.MessageType;
+import com.example.codeTamerBack.rest.v1.chatMessage.interfaces.MessageType;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 

@@ -1,10 +1,10 @@
-package com.example.codeTamerBack.rest.v1.Interfaces;
+package com.example.codeTamerBack.rest.v1.user.requests;
 
-public class ChangePasswordResponse {
+public class ChangePasswordRequest {
     public String oldPassword;
     public String password;
 
-    public ChangePasswordResponse(
+    public ChangePasswordRequest(
             String password,
             String oldPassword
     ) {

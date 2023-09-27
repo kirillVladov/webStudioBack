@@ -1,6 +1,6 @@
 package com.example.codeTamerBack.services.socketIo;
 
-import com.example.codeTamerBack.rest.v1.Interfaces.MessageType;
+import com.example.codeTamerBack.rest.v1.chatMessage.interfaces.MessageType;
 import lombok.Data;
 
 @Data

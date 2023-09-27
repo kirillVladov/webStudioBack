@@ -1,7 +1,7 @@
-package com.example.codeTamerBack.rest.v1.question;
+package com.example.codeTamerBack.rest.v1.feedback.controller;
 
-import com.example.codeTamerBack.rest.v1.question.Question;
-import com.example.codeTamerBack.rest.v1.question.QuestonRepository;
+import com.example.codeTamerBack.rest.v1.feedback.repository.QuestonRepository;
+import com.example.codeTamerBack.rest.v1.feedback.model.Question;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

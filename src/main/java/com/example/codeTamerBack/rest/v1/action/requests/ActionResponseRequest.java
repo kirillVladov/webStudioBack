@@ -1,11 +1,9 @@
 package com.example.codeTamerBack.rest.v1.action.requests;
 
-import com.example.codeTamerBack.rest.v1.Interfaces.ActionStatus;
+import com.example.codeTamerBack.rest.v1.action.interfaces.ActionStatus;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.jetbrains.annotations.NotNull;
-
-import java.awt.*;
 
 public class ActionResponseRequest {
     private ActionStatus status;

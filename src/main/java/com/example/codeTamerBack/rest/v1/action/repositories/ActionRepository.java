@@ -1,6 +1,6 @@
 package com.example.codeTamerBack.rest.v1.action.repositories;
 
-import com.example.codeTamerBack.rest.v1.Interfaces.ActionStatus;
+import com.example.codeTamerBack.rest.v1.action.interfaces.ActionStatus;
 import com.example.codeTamerBack.rest.v1.action.models.Action;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;

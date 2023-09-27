@@ -1,6 +1,6 @@
 package com.example.codeTamerBack.rest.v1.action.models;
 
-import com.example.codeTamerBack.rest.v1.Interfaces.ActionStatus;
+import com.example.codeTamerBack.rest.v1.action.interfaces.ActionStatus;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.data.annotation.CreatedDate;

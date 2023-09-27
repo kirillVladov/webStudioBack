@@ -1,6 +1,6 @@
 package com.example.codeTamerBack.rest.v1.user.repositories;
 
-import com.example.codeTamerBack.rest.v1.Interfaces.UserRole;
+import com.example.codeTamerBack.rest.v1.user.interfaces.UserRole;
 import com.example.codeTamerBack.rest.v1.user.models.User;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
