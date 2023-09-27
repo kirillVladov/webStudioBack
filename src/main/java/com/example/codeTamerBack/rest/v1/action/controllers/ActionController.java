@@ -22,8 +22,8 @@ public class ActionController {
     private ActionService actionService;
 
     @PostMapping("actions")
-    public Action addAction(@RequestBody Action data) {
-        return actionRepository.save(data);
+    public Action addAction(@RequestBody Action data) throws Exception {
+        return actionService.addAction(data);
     }
 
     @PutMapping("actions/response")

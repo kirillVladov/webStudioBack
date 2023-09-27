@@ -28,6 +28,14 @@ public class ActionService {
 
     public ActionService(){}
 
+    public Action addAction(Action action) throws Exception {
+        Action isIncludesAction = actionRepository.findByTaskIdAndUserId(action.getTaskId(), action.getUserId());
+
+        if(isIncludesAction != null) throw new Exception("foenfw");
+
+        return actionRepository.save(action);
+    }
+
     public Action answerOnAction(@NotNull ActionStatus status, @NotNull String actionId) throws Exception {
         Action userAction = actionRepository.findByActionId(actionId);
 

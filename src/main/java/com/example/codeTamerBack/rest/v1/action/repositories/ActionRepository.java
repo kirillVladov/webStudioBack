@@ -15,4 +15,7 @@ public interface ActionRepository extends MongoRepository<Action, String> {
 
     @Query
     Action findByActionId(String id);
+
+    @Query
+    Action findByTaskIdAndUserId(String taskId, String userId);
 }
